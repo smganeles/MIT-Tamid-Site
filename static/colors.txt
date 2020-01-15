@@ -1,0 +1,19 @@
+	light blue:
+	background-color: #e0eeff;
+
+	another one:
+	#ebf1f7
+
+	another one:
+	#edf5fc (using)
+
+
+	dark blue text:
+	color: #2e4157;
+
+	light pink:
+	#C9B1BD  (201,177,189)
+
+
+	aqua blue:
+	#A3C4BC

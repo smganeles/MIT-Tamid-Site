@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/style.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="../static/script.js"></script>
+
+	<title>Contact</title>
+</head>
+
+<body>
+
+	<nav id = "nav_box">
+		<div class='w-100' id="head_overlay">
+
+			<a href="{{url_for('home')}}" id="TAMID">
+				<div class="textBox">
+					<p class="Main" id="Title">TAMID</p>
+					<p id="at">AT</p>
+					<p class="Main">MIT</p>
+				</div>
+			</a>
+
+			<div class="" id="navbarText">
+				<ul class="mr-auto" id="nav_list">
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('about')}}">About</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('board')}}">Board</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('portal')}}">Portal</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+</body>
+</html>

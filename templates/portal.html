@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/style.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="../static/script.js"></script>
+
+	<title>Portal</title>
+</head>
+
+<body>
+
+	<nav id = "nav_box">
+		<div class='w-100' id="head_overlay">
+
+			<a href="{{url_for('home')}}" id="TAMID">
+				<div class="textBox">
+					<p class="Main" id="Title">TAMID</p>
+					<p id="at">AT</p>
+					<p class="Main">MIT</p>
+				</div>
+			</a>
+
+			<div class="" id="navbarText">
+				<ul class="mr-auto" id="nav_list">
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('about')}}">About</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('board')}}">Board</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('portal')}}">Portal</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class = "container">
+		<div class="row my-5" id="">
+
+			<p style="display:none" id="logged_in">{{Name}}</p>
+
+			<div class="col-12 col-lg-5 p-4 mx-auto" id="portal">
+				<form action ="/portal" method = "POST"> <!-- id="portal_form"> -->
+					<h3>Portal:</h3>
+					<div class="form-group">
+						<label for="usr">Name:</label>
+						<input type="text" name = "Name" class="form-control portal" id="usr" value="{{input_name}}">
+					</div>
+					<div class="form-group">
+						<label class="d-inline" id="pwd_lbl" for="pwd">Password:</label>
+						<p id="no_match" style="display: inline; opacity: 0"> Passwords Don't Match </p>
+						<button class="show none float-right mb-1" type="button">Show Password</button>
+						<input type="password" name="Password" class="form-control portal" id="pwd" value="{{input_password}}">
+					</div>
+					<div class="form-group confirm">
+						<label class="d-inline" id="cmfrm_lbl" for="cnfrm">Confirm Password:</label>
+						<button class="show none float-right mb-1" type="button">Show Password</button>
+						<input type="password" class="form-control portal" id="cnfrm">
+					</div>
+					<div class="form-group confirm">
+						<label for="key" id="key_lbl">Member Key:</label>
+						<p id="no_key" style="display: inline; opacity: 0">Incorrect Key</p>
+						<input type="text" class="form-control portal" id="key">
+					</div>
+
+					<!-- <input style="display:none" name="portal_type" value="Sign_In" id="portal_type"> -->
+
+					<div class="row mb-0 no-bg">
+						<div class="col">
+							<input type="submit" name="action" class="form-control portal portal_btn" id="signin" value="Sign In">
+						</div>
+						<div class="col">
+							<input type="button" name="action" class="form-control portal portal_btn" id="signup" value="Sign Up">
+						</div>
+					</div>
+
+					<div class="form-group pt-3">
+						<p>{{msg}}</p>
+					</div>
+
+				</form>
+			</div>
+
+			<div class="col-5 col-lg-3 mx-auto centered" id="drive_links">
+				<h1>Portal:</h3>
+				<a class="my-2" href="https://drive.google.com/drive/folders/1yumUmPw0SvElpu_JTKIPGl9Cwfz3C0yH?usp=sharing" target="_blank">
+					<h3>Education Files</h3>
+				</a>
+				<a class="my-2" href="https://drive.google.com/drive/folders/1fj-MnqWRzQ4p5NFVDqiQi5xW0Gpbc16c?usp=sharing" target="_blank">
+					<h3>Consulting Files</h3>
+				</a>
+				<a class="my-2" href="https://drive.google.com/drive/folders/17hoUz_zQX5ORC977jOTQqNdJF4AlEBn_?usp=sharing" target="_blank">
+					<h3>Fund Files</h3>
+				</a>
+				<form action="/portal" method = "POST" class="my-2" style="width:100px">
+					<div class="form-group">
+						<input type="submit" name="action" class="form-control portal portal_btn" value="Sign Out">
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+</html>

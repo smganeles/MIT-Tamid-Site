@@ -1,0 +1,180 @@
+html, body {
+	height:100%;
+}
+
+
+/*navbar*/
+
+.textBox {
+	display: flex;
+	align-items: center;
+}
+
+.Main {
+	line-height: .55;
+	font-weight: bold;
+	color:white;
+	font-size: 115px;
+}
+
+.nav-link {
+	color:white;
+	font-size: 20px;
+	/*font-weight: bold;*/
+}
+
+.nav-link:hover {
+	color:#d9d9d9;
+}
+
+#nav_box {
+/*	min-width: 1200px;*/
+	height: auto;
+	background-color: #bfbfbf;
+	background-image: url("../static/images/Tel_Aviv_blue.jpg");
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#head_overlay {
+	height: auto;
+	background-color: rgba(67,121,176,0.5);
+	padding-left: 5%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
+#nav_list {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#TAMID {
+	margin-top: 20px;
+	margin-right: 30px;
+}
+
+#TAMID:hover {
+	text-decoration: none;
+}
+
+#at {
+	line-height: .3;
+	/*font-weight: bold;*/
+	color:white;
+	font-size: 60px;
+	align-self: flex-end;
+}
+
+
+
+
+/*page rows*/
+
+.row {
+	font-size: 18px;
+	font-weight: 200;
+	background-color: #edf5fc;
+	color: #2e4157;
+}
+
+.container {
+	width: 100%;
+	max-width: none;
+}
+
+strong {
+	font-weight: 500;
+}
+
+
+
+/*portal*/
+
+
+.portal {
+	border: none;
+	border-radius: 0;
+	background-color: white;
+	border-bottom: 6px solid #2e4157;
+	color: #2e4157;
+}
+
+.portal:hover {
+	color:#566b85;
+	border-color: #566b85;
+}
+
+.portal_btn {
+	padding:5px;
+	height:auto;
+	font-size: 15px;
+}
+
+.portal_btn:focus {
+	background-color: rgba(180,180,180,0.4);
+	color: #566b85;
+}
+
+.no-bg {
+	background-color: rgba(0,0,0,0)
+}
+
+.confirm {
+	display: none;
+}
+
+.none {
+	font-weight: 200;
+	color: #566b85;
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+
+.centered {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	color: #2e4157;
+}
+
+a:hover {
+	color:#566b85;
+	text-decoration: none;
+}
+
+/*Board*/
+
+.board_photo {
+	height:200px;
+	width:200px;
+	/*border-radius: 50%;*/
+	object-fit: cover;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.photo_col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/*about*/
+
+.col-cent {
+	display: flex;
+	align-items: center;
+}
