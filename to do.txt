@@ -1,0 +1,24 @@
+Portal:
+- trim inputs (no spaces at ends)
+- make sure can't sign up with empty name ()
+- if signed in hide the portal form, make a page for members, add a sign out buttom
+- make sure cant copy usernames: utilize is_Name
+
+Home:
+- min width for photo slider, make it move to next line if too thin
+
+About:
+- Draw what i want
+- fill it in HTML
+
+Contact:
+- draw what i want
+- fill it in HTML
+
+
+Overall:
+- test on high-res screen, see if need to change to Rem (multiple browsers)
+
+
+Current Sign In Setup:
+- signed in if: session['username'] != ""
