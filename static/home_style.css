@@ -44,6 +44,8 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
+
 }
 
 #head_overlay {
@@ -54,6 +56,7 @@ html, body {
 	flex-direction: row;
 	align-items: center;
 	flex-wrap: wrap;
+
 }
 
 #nav_list_box {
@@ -196,6 +199,7 @@ h1, h3, h4 {
 .fpg_row {
 	font-size: 18px;
 	font-weight: 200;
+	/*box-shadow: 0 0 15px 5px rgba(0,0,0,.1)*/
 }
 
 .carousel-indicators { 
@@ -207,6 +211,7 @@ h1, h3, h4 {
 	padding-left: 0;
 	padding-right: 0;
 	max-width: 500px;
+	box-shadow: 0 0 15px 5px rgba(0,0,0,.1);
 }
 
 .slide_img {
@@ -217,6 +222,7 @@ h1, h3, h4 {
 #big_info {
 	background-color: #edf5fc;
 	color: #2e4157;
+	box-shadow: 0 0 15px 5px rgba(0,0,0,.1);
 }
 
 .info {
@@ -225,6 +231,7 @@ h1, h3, h4 {
 	align-items: center;
 	color:#2e4157;
 	background-color: #edf5fc;
+	box-shadow: 0 0 15px 5px rgba(0,0,0,.1);
 }
 
 .info:hover {
@@ -251,6 +258,7 @@ h1, h3, h4 {
 	background-position: center;
 	background-color: #1b5085;
 	color:white;
+	box-shadow: 0 0 15px 5px rgba(0,0,0,.1);
 }
 
 .fpg_signin {

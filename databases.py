@@ -32,3 +32,7 @@ def is_Name(name_input):
 		if member.Name == name_input:
 			return True
 	return False
+
+def remove_Member(name_input):
+	member = session.query(Member).filter_by(Name = name_input).delete()
+	session.commit()

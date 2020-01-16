@@ -51,18 +51,29 @@
 		<div class="row my-5">
 
 			<div class = "col pt-5">
+
 				<ul style = "padding-inline-start:0px;">
 					{% for member in members %}
-					<li class = "list-group-item">
-						<p class="my-0">Name: {{member[0]}}</p>
-						<p class="my-0">Password: {{member[1]}}</p>
+					<li class = "list-group-item member" >
+						<p class="my-0">Name: <span class="names">{{member[0]}}</span></p>
+						<p class="my-0"> Password: <span class="passwords">{{member[1]}}</span></p>
 					</li>
 					{% endfor %}
 				</ul>
+
+				<form action="/portal" method = "POST" class="my-2" id="rmv_member">
+					<div class="">
+						<button id="rmv_mems" class="portal portal_btn" type="button" data-toggle="button" aria-pressed="false" autocomplete="off">
+						  Remove Members
+						</button>
+					</div>
+					<input hidden type="text" name="action" value="Remove Member">
+					<input hidden class="my-3" name="Name" value="" id="rmv_name">
+				</form>
+
 			</div>
 
 		</div>
-
 	</div>
 
 	

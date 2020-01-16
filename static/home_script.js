@@ -20,6 +20,7 @@ $(document).ready(function() {
 				.animate({height: height}, 1000)
 				.queue(function (next) {
 					$(this).css("height","auto");
+					$("#head_overlay").css("box-shadow","0 0 15px 5px rgba(0,0,0,.2)");
 					next();
 				});
 
@@ -51,6 +52,7 @@ $(document).ready(function() {
 	} else {
 		$("#TAMID").css("marginTop", "20px");
 		$("#nav_box").css("height", "auto");
+		$("#head_overlay").css("box-shadow","0 0 15px 5px rgba(0,0,0,.2)");
 
 		$(".title").css("fontSize","115px");
 

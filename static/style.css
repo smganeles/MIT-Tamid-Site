@@ -37,6 +37,7 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	box-shadow: 0 0 15px 5px rgba(0,0,0,.2);
 }
 
 #head_overlay {
@@ -84,6 +85,7 @@ html, body {
 	font-weight: 200;
 	background-color: #edf5fc;
 	color: #2e4157;
+	box-shadow: 0 0 15px 5px rgba(0,0,0,.1)
 }
 
 .container {
@@ -177,4 +179,11 @@ a:hover {
 .col-cent {
 	display: flex;
 	align-items: center;
+}
+
+
+/*members*/
+
+#remove_mems:active {
+	background-color: grey;
 }

@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect, url_for, render_template, request
 from flask import session # as login_session
 
-from databases import add_Member, All_Members, is_Member, is_Name
+from databases import add_Member, All_Members, is_Member, is_Name, remove_Member
 
 app = Flask(__name__, static_folder="static")
 app.secret_key = "MY_SUPER_SECRET_KEY"
@@ -39,6 +39,12 @@ def portal():
 			session['username'] = ''
 			return redirect('home')
 
+		elif request.form['action'] == "Remove Member":
+			name = request.form['Name']
+			remove_Member(name)
+			print(name)
+			return redirect('members')
+
 		else:  #sign in or sign up
 			name = request.form['Name']
 			password = request.form['Password']
@@ -47,8 +53,11 @@ def portal():
 				return render_template("portal.html", input_name=name, input_password=password)
 
 			elif request.form['action']=="Sign Up":
-				add_Member(name, password)
-				return redirect('home')
+				if not is_Name(name):	
+					add_Member(name, password)
+					return redirect('home')
+				else:
+					return render_template("portal.html", msg="That Name is Taken")
 
 			elif request.form['action']=="Sign In":
 				if is_Member(name, password):
@@ -72,4 +81,4 @@ def members():
 ####################################################
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5017, threaded=False)
+    app.run(debug=True, port=5019, threaded=False)

@@ -46,4 +46,22 @@ $(document).ready(function() {
 		$("#drive_links").show(0);
 	}
 
+
+	var rmv_mems = false;
+	$("#rmv_mems").click(function() {
+		rmv_mems = !rmv_mems;
+		if (rmv_mems==true) {
+			$(".member").attr("type","button");
+		} else {
+			$(".member").removeAttr("type");
+		}
+	});
+
+	$(".member").click(function() {
+		if (rmv_mems==true) {
+			$("#rmv_name").val($(".member:hover .names").html());
+			$("#rmv_member").submit()
+		}
+	})
+
 });
