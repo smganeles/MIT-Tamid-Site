@@ -1,15 +1,14 @@
 Portal:
 - trim inputs (no spaces at ends)
 - make sure can't sign up with empty name ()
-- if signed in hide the portal form, make a page for members, add a sign out buttom
-- fix is_name if havent filled out whole form
+- utilize is_name if havent filled out whole form
+- once sign in make it so person is signed in (session['username] != "")
 
 Home:
 - min width for photo slider, make it move to next line if too thin
 
 About:
-- Draw what i want
-- fill it in HTML
+- Add info
 
 Contact:
 - draw what i want

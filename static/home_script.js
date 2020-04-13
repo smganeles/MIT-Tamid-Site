@@ -66,6 +66,7 @@ $(document).ready(function() {
 		$(".container").css("height", "auto");
 
 		$("#head_overlay").css("background-color", "rgba(67,121,176,0.5)");
+
 	}
 
 	if ($("#username").html() == "") {
